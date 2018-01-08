@@ -1,0 +1,32 @@
+create table member(
+	id varchar(50) not null primary key,
+	passwd varchar(16) not null,
+	name varchar(10) not null,
+	reg_date datetime not null,
+	address varchar(100) not null,
+	tel varchar(20) not null
+);
+
+insert into member(id,passwd,name,reg_date,address,tel)
+	values('hongkd@aaa.com','1111','홍길동',now(),
+	'인천시 남동구 정각로 29','010-2225-1234');
+
+insert into member(id,passwd,name,reg_date,address,tel)
+	values('kimkijung@aaa.com','222','김기정',now(),
+	'서울시 북성구 차로 487','010-5549-2844');
+
+insert into member(id,passwd,name,reg_date,address,tel)
+	values('slw@aaa.com','1111','김진욱',now(),
+	'대구시 달서구 성지로 29','010-2284-3053');
+
+select * from member;
+
+create table manager(
+	managerId varchar(50) not null primary key,
+	managerPasswd varchar(16) not null
+);
+
+insert into manager(managerId,managerPasswd)
+	values('bookmaster@shop.com','123456');
+
+select * from manager;
